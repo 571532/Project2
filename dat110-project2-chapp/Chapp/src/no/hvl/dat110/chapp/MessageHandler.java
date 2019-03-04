@@ -30,7 +30,7 @@ public class MessageHandler extends Stopable {
 
 		} catch (Exception e) {
 			this.doStop();
-			// e.printStackTrace();
+			
 		}
 	}
 }
