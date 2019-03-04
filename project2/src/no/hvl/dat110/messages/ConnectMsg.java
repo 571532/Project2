@@ -6,4 +6,6 @@ public class ConnectMsg extends Message {
 		super(MessageType.CONNECT, user);
 	}
 	
+	
+	
 }

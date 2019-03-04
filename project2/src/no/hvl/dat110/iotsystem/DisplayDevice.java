@@ -12,9 +12,14 @@ public class DisplayDevice {
 		
 		System.out.println("Display starting ...");
 		
-		// TODO - START
-				
-		// TODO - END
+		Client client = new Client("Display device", "localhost", 8080);
+		client.connect();
+		client.createTopic("Temperature");
+		client.subscribe("Temperature");
+		for(int i = 0; i<COUNT; i++){
+			Message msg = client.receive();
+			System.out.println(msg);
+		}
 		
 		System.out.println("Display stopping ... ");
 		
